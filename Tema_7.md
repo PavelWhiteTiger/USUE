@@ -52,10 +52,7 @@ with open("./resources/lab7_2.txt", "a+", ) as myFile:
 ## Задание №3
 Имеется файл input.txt с текстом на латинице. Напишите программу, которая выводит следующую статистику по тексту: количество букв латинского алфавита; число слов; число строк.
 ```python
-inputVar = int(input("input a number: "));
-print(inputVar);
-```
-![Результат](https://github.com/PavelWhiteTiger/USUE/blob/import re
+import re
 
 with open("./resources/input.txt", "r", ) as myFile:
     allText = myFile.readlines();
@@ -72,7 +69,8 @@ with open("./resources/input.txt", "r", ) as myFile:
     print(f"{len(letters)} letters")
     print(f"{len(words)} words")
     print(f"{len(allText)} lines")
-lab7/pic/t3.png)
+```
+![Результат](https://github.com/PavelWhiteTiger/USUE/blob/lab7/pic/t3.png)
 
 ## Задание №4
 Напишите программу, которая получает на вход предложение, выводит его в терминал, заменяя все запрещенные слова звездочками * (количество звездочек равно количеству букв в слове). Запрещенные слова, разделенные символом пробела, хранятся в текстовом файле input.txt. Все слова в этом файле записаны в нижнем регистре. Программа должна заменить запрещенные слова, где бы они ни встречались, даже в середине другого слова. Замена производится независимо от регистра: если
