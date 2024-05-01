@@ -55,7 +55,24 @@ with open("./resources/lab7_2.txt", "a+", ) as myFile:
 inputVar = int(input("input a number: "));
 print(inputVar);
 ```
-![Результат](https://github.com/PavelWhiteTiger/USUE/blob/lab7/pic/t3.png)
+![Результат](https://github.com/PavelWhiteTiger/USUE/blob/import re
+
+with open("./resources/input.txt", "r", ) as myFile:
+    allText = myFile.readlines();
+    letters = []
+    for i in range(len(allText)):
+        allText[i] = allText[i].strip()
+        letters += list(filter(lambda x: x != " ", re.sub("\\.*'*-*:*,*«*»*\"*\\?*!*", "", allText[i])))
+
+    words = []
+
+    for i in range(len(allText)):
+        words += allText[i].split(" ")
+
+    print(f"{len(letters)} letters")
+    print(f"{len(words)} words")
+    print(f"{len(allText)} lines")
+lab7/pic/t3.png)
 
 ## Задание №4
 Напишите программу, которая получает на вход предложение, выводит его в терминал, заменяя все запрещенные слова звездочками * (количество звездочек равно количеству букв в слове). Запрещенные слова, разделенные символом пробела, хранятся в текстовом файле input.txt. Все слова в этом файле записаны в нижнем регистре. Программа должна заменить запрещенные слова, где бы они ни встречались, даже в середине другого слова. Замена производится независимо от регистра: если
