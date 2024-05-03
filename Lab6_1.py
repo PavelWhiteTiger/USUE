@@ -1,0 +1,5 @@
+crazyString = input("Введите цифры разделенные пробелом")
+listResult = list(filter(lambda x: x != " ", list(crazyString)))
+tupleResult = tuple(listResult)
+print(listResult)
+print(tupleResult)
